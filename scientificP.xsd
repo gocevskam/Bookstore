@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:tns="http://www.example.org/ScienceDepartment" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.example.org/ScienceDepartment" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			
+<xs:element name="scientificP">
+  <xs:complexType>
+    <xs:sequence>
+     
+	  <xs:element name="book" minOccurs="0" maxOccurs="unbounded">	 
+		<xs:complexType>
+			<xs:sequence>
+			
+			  <xs:element name="title">
+				  <xs:simpleType>
+					<xs:restriction base="xs:string">
+					  <xs:whiteSpace value="preserve"/>
+					</xs:restriction>
+				  </xs:simpleType>
+			  </xs:element>
+			  
+			  
+			  <xs:choice>
+			  
+				  <xs:element name="authors">
+					<xs:complexType>
+						<xs:sequence>
+							  <xs:element name="author" maxOccurs="unbounded">
+								  <xs:simpleType>
+									<xs:restriction base="xs:string">
+									  <xs:whiteSpace value="preserve"/>
+									</xs:restriction>
+								  </xs:simpleType>
+							 </xs:element> 
+						</xs:sequence>
+					  </xs:complexType>
+				  </xs:element> 
+				  
+				  <xs:element name="editors">
+					<xs:complexType>
+						<xs:sequence>
+							   <xs:element name="editor" maxOccurs="unbounded">
+								  <xs:simpleType>
+									<xs:restriction base="xs:string">
+									  <xs:whiteSpace value="preserve"/>
+									</xs:restriction>
+								  </xs:simpleType>
+							   </xs:element> 
+						</xs:sequence>
+					  </xs:complexType>
+				  </xs:element> 
+				  
+	  		  </xs:choice>
+			  
+			  <xs:element name="publisher">
+				  <xs:simpleType>
+					<xs:restriction base="xs:string">
+					  <xs:whiteSpace value="preserve"/>
+					</xs:restriction>
+				  </xs:simpleType>
+			  </xs:element> 
+						  
+			  <xs:element name="year">
+				  <xs:simpleType>
+					<xs:restriction base="xs:integer">
+					  <xs:pattern value="[0-9][0-9][0-9][0-9]"/>
+					</xs:restriction>
+				  </xs:simpleType>
+			  </xs:element> 
+			  
+			  
+			  <xs:element name="abstract" minOccurs="0" maxOccurs="1">
+				  <xs:simpleType>
+					<xs:restriction base="xs:string">
+					  <xs:whiteSpace value="preserve"/>
+					</xs:restriction>
+				  </xs:simpleType>
+			  </xs:element> 
+				
+			  <xs:element name="edition" minOccurs="0" maxOccurs="1">
+				  <xs:simpleType>
+					<xs:restriction base="xs:string">
+					  <xs:whiteSpace value="preserve"/>
+					</xs:restriction>
+				  </xs:simpleType>
+			  </xs:element> 
+				
+				
+			  <xs:element name="isbn" minOccurs="0" maxOccurs="1">
+				  <xs:simpleType>
+					<xs:restriction base="xs:string">
+					  <xs:whiteSpace value="preserve"/>
+					</xs:restriction>
+				  </xs:simpleType>
+			  </xs:element> 
+			  		 
+			</xs:sequence>
+		  </xs:complexType>
+		</xs:element> 
+	  
+	  
+	  
+	  
+	  
+	  <xs:element name="journal" minOccurs="0" maxOccurs="unbounded">
+		<xs:complexType>
+			<xs:sequence>
+			
+			  <xs:element name="title">
+				  <xs:simpleType>
+					<xs:restriction base="xs:string">
+					  <xs:whiteSpace value="preserve"/>
+					</xs:restriction>
+				  </xs:simpleType>
+			  </xs:element>
+			  
+			  <xs:element name="volume" type="xs:positiveInteger"/>
+			  <xs:element name="number" type="xs:positiveInteger"/>
+			  
+			  <xs:choice>
+				    <xs:element name="authors">
+					<xs:complexType>
+						<xs:sequence>
+							  <xs:element name="author" maxOccurs="unbounded">
+								  <xs:simpleType>
+									<xs:restriction base="xs:string">
+									  <xs:whiteSpace value="preserve"/>
+									</xs:restriction>
+								  </xs:simpleType>
+							 </xs:element> 
+						</xs:sequence>
+					  </xs:complexType>
+				  </xs:element> 
+				  
+				  <xs:element name="editors">
+					<xs:complexType>
+						<xs:sequence>
+							   <xs:element name="editor" maxOccurs="unbounded">
+								  <xs:simpleType>
+									<xs:restriction base="xs:string">
+									  <xs:whiteSpace value="preserve"/>
+									</xs:restriction>
+								  </xs:simpleType>
+							   </xs:element> 
+						</xs:sequence>
+					  </xs:complexType>
+				  </xs:element> 
+			  </xs:choice>
+			  
+			  <xs:element name="year">
+				  <xs:simpleType>
+					<xs:restriction base="xs:integer">
+					  <xs:pattern value="[0-9][0-9][0-9][0-9]"/>
+					</xs:restriction>
+				  </xs:simpleType>
+			  </xs:element> 
+			   
+			  <xs:element name="publisher" minOccurs="0" maxOccurs="1">
+				  <xs:simpleType>
+					<xs:restriction base="xs:string">
+					  <xs:whiteSpace value="preserve"/>
+					</xs:restriction>
+				  </xs:simpleType>
+			  </xs:element> 
+			  
+			  <xs:element name="impactFactor" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+					
+						  <xs:element name="value" type="xs:decimal"/>
+						  <xs:element name="year">
+							  <xs:simpleType>
+								<xs:restriction base="xs:integer">
+								  <xs:pattern value="[0-9][0-9][0-9][0-9]"/>
+								</xs:restriction>
+							  </xs:simpleType>
+						  </xs:element> 
+						  
+					</xs:sequence>
+				  </xs:complexType>
+			  </xs:element> 
+			  
+			  
+			  
+			  
+			  
+			  <xs:element name="tableofContents">
+				<xs:complexType>
+					<xs:sequence>
+					
+						  <xs:element name="article" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									  
+									  <xs:element name="title">
+										  <xs:simpleType>
+											<xs:restriction base="xs:string">
+											  <xs:whiteSpace value="preserve"/>
+											</xs:restriction>
+										  </xs:simpleType>
+									  </xs:element>
+									  
+									  <xs:element name="authors">
+										<xs:complexType>
+											<xs:sequence>
+												  <xs:element name="author" maxOccurs="unbounded">
+													  <xs:simpleType>
+														<xs:restriction base="xs:string">
+														  <xs:whiteSpace value="preserve"/>
+														</xs:restriction>
+													  </xs:simpleType>
+												 </xs:element> 
+											</xs:sequence>
+										  </xs:complexType>
+									  </xs:element> 
+									  
+									  
+									  <xs:choice>
+									  
+										  <xs:element name="startEndPage">
+											<xs:complexType>
+												<xs:sequence>
+													  <xs:element name="startPage" type="xs:positiveInteger"/>
+													  <xs:element name="endPage" type="xs:positiveInteger"/>
+												</xs:sequence>
+											  </xs:complexType>
+										  </xs:element> 
+										  
+									  	  <xs:element name="number" type="xs:positiveInteger"/>
+										  
+									  </xs:choice>
+								</xs:sequence>
+							  </xs:complexType>
+							</xs:element> 
+						  
+						  
+						  
+					</xs:sequence>
+				  </xs:complexType>
+			  </xs:element> 
+			 
+			</xs:sequence>
+		  </xs:complexType>
+		</xs:element> 
+	  
+	  
+	  
+	  
+	  
+	  
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>   
+</xs:schema>

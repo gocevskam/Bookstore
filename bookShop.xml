@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bookshop xmlns:s="http://www.example.org/ScienceDepartment"
+           xmlns:l="http://www.example.org/LeisureDepartment">
+
+    
+   
+	<s:scientificP>
+		<s:book>		
+			<s:title>prueba</s:title>
+			<s:authors>			
+				<s:author>prueba</s:author>		
+			</s:authors>
+			<s:publisher>prueba</s:publisher>
+			<s:year>1990</s:year>		
+		</s:book>
+		
+		<s:journal>		
+			<s:title>prueba</s:title>
+			<s:volume>6</s:volume>
+			<s:number>10</s:number>	
+			<s:editors>			
+				<s:editor>editor 1</s:editor>
+				<s:editor>editor 2</s:editor>		
+			</s:editors>
+			<s:year>1990</s:year>
+			<s:publisher>prueba</s:publisher>
+			<s:impactFactor>
+				<s:value>3.45</s:value>
+				<s:year>2010</s:year>	
+			</s:impactFactor>
+			
+			<s:tableofContents>			
+				<s:article>
+					<s:title>prueba</s:title>
+					<s:authors>			
+						<s:author>prueba</s:author>		
+					</s:authors>
+					<s:number>14</s:number>
+				
+				</s:article>
+			</s:tableofContents>
+				
+		</s:journal>
+		
+	</s:scientificP>
+	
+	<l:leisureP>
+		<l:book>		
+			<l:title>prueba</l:title>
+			<l:authors>			
+				<l:author>prueba</l:author>		
+			</l:authors>
+			<l:publisher>prueba</l:publisher>
+			<l:year>1990</l:year>	
+			
+			<l:genre>literature</l:genre>		
+		</l:book>
+		
+		<l:periodical>		
+			<l:title>prueba</l:title>	
+			<l:price>57.4</l:price>			
+			<l:publisher>prueba</l:publisher>
+			
+		</l:periodical>	
+		
+		
+		
+	</l:leisureP>
+   
+	
+</bookshop>
+   
+

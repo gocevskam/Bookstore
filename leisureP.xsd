@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:tns="http://www.example.org/LeisureDepartment" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.example.org/LeisureDepartment" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			
+<xs:element name="leisureP">
+  <xs:complexType>
+    <xs:sequence>
+     
+	  <xs:element name="book" minOccurs="0" maxOccurs="unbounded">	 
+		<xs:complexType>
+			<xs:sequence>
+			
+			  <xs:element name="title">
+				  <xs:simpleType>
+					<xs:restriction base="xs:string">
+					  <xs:whiteSpace value="preserve"/>
+					</xs:restriction>
+				  </xs:simpleType>
+			  </xs:element> 
+			  
+			  
+			  <xs:element name="authors">
+					<xs:complexType>
+						<xs:sequence>
+							  <xs:element name="author" maxOccurs="unbounded">
+								  <xs:simpleType>
+									<xs:restriction base="xs:string">
+									  <xs:whiteSpace value="preserve"/>
+									</xs:restriction>
+								  </xs:simpleType>
+							 </xs:element> 
+						</xs:sequence>
+					  </xs:complexType>
+				</xs:element> 
+				  
+				<xs:element name="publisher" minOccurs="0" maxOccurs="1">
+					  <xs:simpleType>
+						<xs:restriction base="xs:string">
+						  <xs:whiteSpace value="preserve"/>
+						</xs:restriction>
+					  </xs:simpleType>
+				  </xs:element> 
+				  
+				  
+				  <xs:element name="year">
+					  <xs:simpleType>
+						<xs:restriction base="xs:integer">
+						  <xs:pattern value="[0-9][0-9][0-9][0-9]"/>
+						</xs:restriction>
+					  </xs:simpleType>
+				  </xs:element> 
+				  
+				  
+				<xs:element name="genre">
+				  <xs:simpleType>
+					<xs:restriction base="xs:string">
+					  <xs:enumeration value="thriller"/>
+					  <xs:enumeration value="horror"/>
+					  <xs:enumeration value="sci/fi"/>
+					  <xs:enumeration value="romance"/>
+					  <xs:enumeration value="literature"/>
+					</xs:restriction>
+				  </xs:simpleType>
+				</xs:element>
+
+
+				<xs:element name="edition" minOccurs="0" maxOccurs="1">	  
+				  <xs:simpleType>
+					<xs:restriction base="xs:string">
+					  <xs:whiteSpace value="preserve"/>
+					</xs:restriction>
+				  </xs:simpleType>
+				</xs:element> 
+	  
+	  
+	  		    <xs:element name="numPages" minOccurs="0" maxOccurs="1" type="xs:positiveInteger"/>
+			
+			 
+			</xs:sequence>
+		  </xs:complexType>
+		</xs:element> 
+		
+		<xs:element name="periodical">
+			<xs:complexType>
+				<xs:sequence>
+				
+					  <xs:element name="title">
+						  <xs:simpleType>
+							<xs:restriction base="xs:string">
+							  <xs:whiteSpace value="preserve"/>
+							</xs:restriction>
+						  </xs:simpleType>
+					  </xs:element> 
+					  
+				  <xs:element name="price" type="xs:decimal"/>
+				  
+				  <xs:element name="publisher">
+					  <xs:simpleType>
+						<xs:restriction base="xs:string">
+						  <xs:whiteSpace value="preserve"/>
+						</xs:restriction>
+					  </xs:simpleType>
+					</xs:element> 
+				
+				
+				</xs:sequence>
+			  </xs:complexType>
+			</xs:element> 
+		
+	
+	  			
+				
+   
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>   
+</xs:schema>
