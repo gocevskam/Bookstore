@@ -5,6 +5,7 @@ Documents that contain information about a bookshop. The bookshop has
 two main departments “scientific products” and “leisure products”.
 
 XSD Creation
+
 The root element in our XSD it the element “bookshop”. We are using two
 namespaces in order to differentiate the science products department and
 the leisure products department.
